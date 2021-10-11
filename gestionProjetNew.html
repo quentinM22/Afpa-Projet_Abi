@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    
+    <title>ABI - Gestion Projets</title>
+</head>
+
+<body>
+    <header>
+        <ul id='head'>
+            <li><a href="./index.html"><img id='logo' src='./images/logoAbi.png'></a></li>
+            <li id='title'>Création de Projets</li>
+            <div id='divDis'>
+                <input id="buttonDis" type="button" value=" Déconnexion ">
+            </div>
+        </ul>
+    </header>
+
+    <nav>
+        <ul id='menu'>
+            <img src='./images/iconmenu.png'>
+            <li><a href="./GestionCo.html">Gestion Commerciale</a></li>
+            <br>
+            <li><a href="./gestionRH.html">Gestion RH</a></li>
+            <br>
+            <li><a href="./gestionProjet.html">Gestion des Projets</a></li>
+            <br>
+            <li><a href="">Communs</a></li>
+        </ul>
+    </nav>
+
+    <section class="sections">
+        <article  class="communs">
+            <h1>Bienvenue dans la crétion d'un nouveau Projet</h1>
+
+            <h3>Veuillez prendre en compte les instructions suivantes :</h3>
+
+            <ul>
+                <li>Le code du projet commence par '#' suivis de 4 chiffres</li>
+                <li>Le libellé court doit être long de 3 caractères pas plus ni moins</li>
+                <li>La date prévue de fin du projet doit être supérieur à la date de début</li>
+            </ul>
+        </article>
+        
+        <article  class="communs">
+            <form>
+                <p>
+                    <label for="codeProject">Code du projet :</label>
+                    <input type="text" name="codeProject" id="codeProject" required placeholder="#0000" pattern="#[0-9]{4}">
+                    <span id="helpCodeProject"></span>
+                </p>
+                <p>
+                    <label for="shortWording">Libellé court :</label>
+                    <input type="text" name="shortWording" id="shortWording" minlength="3" maxlength="3" placeholder="exp" required>
+                    <span id="HelpshortWording"></span>
+                </p>
+                <p>
+                    <label for="name">Nom du projet :</label>
+                    <input type="text" name="name" id="name" required>
+                    <span id="helpName"></span>
+                </p>
+                <p>
+                    <label>Type :</label>
+                    <input type="radio" name="type" class="type" id="typeF" value="Forfait" checked>
+                    <label for="typeF">Forfait</label>
+                    <input type="radio" name="type" class="type" id="typeR" value="Régie">
+                    <label for="typeR">Régie</label>
+                    <input type="radio" name="type" class="type" id="typeA" value="Assistance">
+                    <label for="typeA">Assistance</label>
+                </p>
+                <p>
+                    <label for="sector">Secteur d'activité :</label>
+                    <select name="sector" id="sector">
+                        <option value="production céréale" selected>production céréale</option>
+                        <option value="Coopérative">coopérative</option>
+                        <option value="Négoce en gros">négoce en gros</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="start">Début théorique :</label>
+                    <input type="date" class="date" id="start" name="start" min= "2020-12-19" required>
+                    <br>
+                    <label for="end">Fin théorique :</label>
+                    <input type="date" class="date" id="end" name="end"required>
+                </p>
+                <p>
+                    <!--Charge globale estimée une entrée puis un menu deroulent pour selectionné jour ou heur. -->
+                    <label for="overallLoad">Charge globale estimée :</label>
+                    <input type="number" name="overallLoad" id="overallLoad" required maxlength="3">
+                    <select name="time" id="time">
+                        <option value="j" selected>jour</option>
+                        <option value="h">heure</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="note">Remarque sur l'estimation :</label>
+                    <br>
+                    <input type="text" name="note" class="notes">
+                </p>
+                <p>
+                    <label for="size">Taille maximum de l'équipe :</label>
+                    <input type="number" name="size" id="size" required>
+                </p>
+                <p>
+                    <label>Personnes associées :</label>
+                    <br>
+                    <input type="radio" name="assosiation" class="type" id="commercial" value="Commercial" checked>
+                    <label for="commercial">Commercial</label>
+                    <input type="radio" name="assosiation" class="type" id="productOwner" value="ProductOwner">
+                    <label for="productOwner">Product Owner</label>
+                    <input type="radio" name="assosiation" class="type" id="scrumMaster" value="ScrumMaster">
+                    <label for="scrumMaster">Scrum Master</label>
+                </p>
+                <div id="ending">
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Annuler">
+                </div>
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <ul id=foot>
+            <li><a href="" >mentions légale</a></li>
+            <li><a href="">nous contactez</a></li>
+        </ul>
+    </footer>
+    <script src="./JS/Projet.js"></script>
+    <script src="./JS/newProject.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>ABI - Liste Colab </title>
+</head>
+<body onload=ajout()>
+    <header>
+        <ul id='head'>
+            <li><a href="./index.html"><img id='logo' src='./images/logoAbi.png'></a></li>
+            <li id='title'>Liste collaborateurs</li>
+            <div id="divDis">
+                <input id="buttonDis" type="button" value=" Déconnexion ">
+            </div>
+        </ul>
+    </header>
+    <nav>
+        <ul id='menu'>
+            <img src='./images/iconmenu.png'>
+            <li><a href="./GestionCo.html">Gestion Commerciale</a></li>
+            <br>
+            <li><a href="./gestionRH.html">Gestion RH</a></li>
+            <br>
+            <li><a href="./gestionProjet.html">Gestion des Projets</a></li>
+            <br>
+            <li><a href="">Communs</a></li>
+        </ul>
+    </nav>
+     <section class="sections">
+        <article class='communs'>
+            
+                <legend><h3>Suivis collaborateurs :</h3></legend>
+                <ul id="liste">
+                </ul>
+         
+        </article>
+        
+        <article class='communs'>
+            <form>  
+           
+                <ul>
+                    <legend><h3>Information général :</h3></legend>
+                    <li>Nom  :<label for="name"></label><input type="text" name="name" id="name" />
+                    <li>Prénom :<label for="firstName"></label><input type="text" name="firstName" id="firstName" />
+                    <li>Date de naissance :<label for="dateBirth"></label><input type="date" name="dateBirth" id="dateBirth" />
+                    <li>adresse :<label for="adress"></label><textarea name="adress" id="adress"></textarea>
+                    <li>Type de contrat : <br />
+                        <input type="radio" name="contractType" value="internship" id="internship" /> <label for="internship">Stagiaire</label><br />
+                            
+                        <input type="radio" name="contractType" value="interim" id="interim" /> <label for="interim">Intérimaire</label><br />
+                        
+                        <input type="radio" name="contractType" value="CDD" id="CDD" /> <label for="CDD">CDD</label><br />
+                            
+                        <input type="radio" name="contractType" value="CDI" id="CDI" /> <label for="CDI">CDI</label>
+                            
+                    <li>Ecole :<label for="school"></label><input type="text" name="school" id="school" />
+                    <li>Agence :<label for="agency"></label><input type="text" name="agency" id="agency" />
+                    <li>Motif de mission :<label for="reasonMission">Motif de mission</label><textarea name="reasonMission" id="reasonMission"></textarea>
+                        
+
+                    <li>Fonctions :<label for="functions">Information fonctions :</label> :
+                        <select name="functions" id="functions">
+                            <option value ="studyLeader">Responsable Etude</option>
+                            <option value ="scrumMaster">Scrum Master</option>
+                            <option value ="developpeur">Développeur</option>
+                            <option value ="supportEngineer">Technicien support</option>
+                            <option value ="commercial">Commercial</option>
+                            <option value ="technicoCommercial">Technico-commercial</option>
+                            <option value ="secretary">Secrétaire</option>
+                        </select>
+                    
+                    <li>Qualifications :<label for="qualifications">Information qualifications :</label> :
+                        <select name="qualifications" id="qualifications">
+                            <option value ="architect">Architecte</option>
+                            <option value ="designer">Designer</option>
+                            <option value ="devBdd">Développeur BDD</option>
+                            <option value ="devWeb">Développeur Web</option>
+                            <option value ="bilingualSecretary">Secrétaire Bilingue</option>
+                            <option value ="headOfDepartment">Chef de service</option>
+                            <option value ="commercialAgent">Agent commercial</option>
+                        </select>
+                    
+                    <li>Salaire :<label for="salary"></label><input type="text" name="salary" id="salary" />
+                    <li>Date de début de contrat :<label for="contractStartDate"></label><input type="date" name="contractStartDate" id="contractStartDate" />
+                    <li>Date de fin de contrat :<label for="contractEndDate"></label><input type="date" name="contractEndDate" id="contractEndDate" />
+                </ul>
+            
+                <div id='endingButton'>
+                    <input id='validButton' type="submit" value="Valider"> 
+                </div>
+            </form>    
+          </article>
+     </section>  
+     <footer>
+        <ul id=foot>
+          <li><a  href="#" >mentions légale</a></li> 
+            <br>
+          <li><a class=foot href="#">nous contactez</a></li>
+        </ul>
+    </footer>
+    <script src="./JS/classCollab.js"></script>
+    <script src="./JS/collabListe.js"></script>
+</body>
+</html>

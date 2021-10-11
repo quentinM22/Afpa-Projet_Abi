@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>ABI France - Admin</title>
+</head>
+<body>
+    <header>
+      <ul id='head'>
+        <li><a href="./index.html"><img id='logo' src='./images/logoAbi.png'></a></li>
+      </ul>
+    </header> 
+      <nav>
+        <ul id='menu'>
+          <img src='./images/iconmenu.png'>
+            <li><a href="./gestionCo.html">Gestion Commerciale</a></li>
+            <br>
+            <li><a href="./gestionRH.html">Gestion RH</a></li>
+            <br>
+            <li><a href="./gestionProjet.html">Gestion des Projets</a></li>
+            <br>
+            <li><a href="">Communs</a></li>
+        </ul>
+      </nav>
+    <section id="sectionAdmin">
+        <article class="addUserBlock">
+            <p>Ajouter un utilisateur</p>
+                <form class="registerUsers">
+                  <label for="lastName"><b>Nom: </b></label>
+                    <input type="text" placeholder="Nom" name="lastName" required><br>
+                  <label for="firstName"><b>Prénom: </b></label>
+                    <input type="text" placeholder="Prénom" name="firstName" required><br>
+                  <label for="userName"><b>identifiant: </b></label>
+                    <input type="text" placeholder="Identifiant" name="userName" required><br>
+                  <label for="password"><b>Mot de passe: </b></label>
+                    <input type="text" placeholder="Mot de Passe" name="password" required><br>
+                  <label for="department"><b>Service: </b></label>
+                  <select name="Service" id="department">
+                    <option value="gestionCo">Gestion Commerciale</option>
+                    <option value="gestionRh">Gestion RH</option>
+                    <option value="gestionProjet">Gestion des Projets</option>
+                    <option value="admin">Administrateur</option>
+                  </select>
+                  <button class="addUser" type="submit">Ajouter utilisateur</button>
+                </form>
+        </article>
+        <article class="formRegisterUsers">
+            <table>
+              <caption>Utilisateurs enregistrés</caption>
+              <tr>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Identifiant</th>
+                <th>Mot de Passe</th>
+                <th>Accès</th>
+              </tr>
+              <tr>
+                <td>Dupont</td>
+                <td>Francois</td>
+                <td>dupontFrancois</td>
+                <td>254854785</td>
+                <td>Gestion projet</td>
+              </tr>
+              <tr>
+                <td>Gros</td>
+                <td>jean</td>
+                <td>grosJean</td>
+                <td>123456789</td>
+                <td>Gestion RH</td>
+              </tr>
+              <tr>
+                <td>Vine</td>
+                <td>Sandy</td>
+                <td>vineSandy</td>
+                <td>987654321</td>
+                <td>Gestion Commerciale</td>
+              </tr>
+            </table>
+        </article>
+    </section>
+  <footer>
+      <ul id=foot>
+        <li><a  href="#" >mentions légale</a></li> 
+          <br>
+        <li><a class=foot href="#">nous contactez</a></li>
+      </ul>
+  </footer>
+    <script src="./JS/admin.js"></script>
+</body>
+</html>

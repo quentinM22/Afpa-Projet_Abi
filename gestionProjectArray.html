@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>ABI - Gestion Projets</title>
+</head>
+
+<body onload="ajout()">
+    <header>
+        <ul id='head'>
+            <li><a href="./index.html"><img id='logo' src='./images/logoAbi.png'></a></li>
+            <li id='title'>Liste des Projets</li>
+            <div id="divDis">
+                <input id="buttonDis" type="button" value=" Déconnexion ">
+            </div>
+        </ul>
+    </header>
+
+    <nav>
+        <ul id='menu'>
+            <img src='./images/iconmenu.png'>
+            <li><a href="./GestionCo.html">Gestion Commerciale</a></li>
+            <br>
+            <li><a href="./gestionRH.html">Gestion RH</a></li>
+            <br>
+            <li><a href="./gestionProjet.html">Gestion des Projets</a></li>
+            <br>
+            <li><a href="">Communs</a></li>
+        </ul>
+    </nav>
+
+    <section class="sections">
+        <article  class="communs">
+            <h1>Bienvenue dans la recherche d'un Projet</h1>
+             
+            <ul id="liste">
+            </ul>
+        </article>
+        
+        <article class="communs">
+            <form>
+                <p>
+                    <label for="codeProject">Code du projet :</label>
+                    <input type="text" name="codeProject" id="codeProject" pattern="#[0-9]{4}" placeholder="#0000" required>
+                    <span id="helpCodeProject"></span>
+                </p>
+                <p>
+                    <label for="shortWording">Libellé court :</label>
+                    <input type="text" name="shortWording" id="shortWording" minlength="3" maxlength="3" required>
+                    <span id="HelpshortWording"></span>
+                </p>
+                <p>
+                    <label for="name">Nom du projet :</label>
+                    <input type="text" name="name" id="name" required>
+                    <span id="helpName"></span>
+                </p>
+                <p>
+                    <label>Type :</label>
+                    <input type="radio" name="type" class="type" id="typeF" value="Forfait">
+                    <label for="typeF">Forfait</label>
+                    <input type="radio" name="type" class="type" id="typeR" value="Régie">
+                    <label for="typeR">Régie</label>
+                    <input type="radio" name="type" class="type" id="typeA" value="Assistance">
+                    <label for="typeA">Assistance</label>
+                </p>
+                <p>
+                    <label for="sector">Secteur d'activité :</label>
+                    <select name="sector" id="sector">
+                        <option value="production céréale">production céréale</option>
+                        <option value="Coopérative">coopérative</option>
+                        <option value="Négoce en gros">négoce en gros</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="start">Début théorique :</label>
+                    <input type="date" class="date" id="start" name="start" min= "2020-12-14">
+                    <label for="end">Fin théorique :</label>
+                    <input type="date" class="date" id="end" name="end">
+                </p>
+                <p>
+                    <label for="realStart">Début officiel :</label>
+                    <input type="date" class="date" id="realStart" name="realStart">
+                    <label for="realEnd">Fin officiel :</label>
+                    <input type="date" class="date" id="realEnd" name="realEnd">
+                </p>
+                <p>
+                    <!--Charge globale estimée une entré puis un menu deroulent pour selectionné jour ou heur. -->
+                    <label for="overallLoad">Charge globale estimée :</label>
+                    <input type="number" name="overallLoad" id="overallLoad" required>
+                    <select name="time" id="time">
+                        <option value="j">jour</option>
+                        <option value="h">heure</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="note">Remarque sur l'estimation :</label>
+                    <input type="text" name="note" class="notes" id="note">
+                </p>
+                <p>
+                    <label for="size">Taille maximum de l'équipe :</label>
+                    <input type="number" name="size" id="size" required>
+                </p>
+                <p>
+                    <label>Personnes associées :</label>
+                    <input type="radio" name="assosiation" class="assosiation" id="commercial" value="Commercial">
+                    <label for="commercial">Commercial</label>
+                    <input type="radio" name="assosiation" class="assosiation" id="productOwner" value="ProductOwner">
+                    <label for="productOwner">Product Owner</label>
+                    <input type="radio" name="assosiation" class="assosiation" id="scrumMaster" value="ScrumMaster">
+                    <label for="scrumMaster">Scrum Master</label>
+                </p>
+                <p>
+                    <label for="history">Interventions des développeurs :</label>
+                    <input type="text" name="history" class="notes" id="history">
+                </p>
+                <p>
+                    <label for="data">Données de charges :</label>
+                    <input type="text" name="data" class="notes" id="data">
+                </p>
+                <p>
+                    <label for="info">Informations générales du projet :</label>
+                    <input type="text" name="info" class="notes" id="info">
+                </p>
+                <div id="endingButton">
+                    <input id="validButton" type="submit" value=" Envoyer ">
+                </div>
+            </form>
+        </article>
+    </section>
+    <footer>
+        <ul id=foot>
+            <li><a href="" >mentions légale</a></li>
+            <li><a href="">nous contactez</a></li>
+        </ul>
+    </footer>
+    <script src="./JS/Projet.js"></script>
+    <script src="./JS/projectMain.js"></script>
+</body>
+</html>

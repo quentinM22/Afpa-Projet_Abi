@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABI - Gestion Commercial</title>
+</head>
+<body>
+    <header>
+        <ul id='head'>
+            <li><a href="./index.html"><img id='logo' src='./images/logoAbi.png'></a></li>
+            <li id='title'>Gestion Commercial</li>
+            <div id="divDis">
+                <input id="buttonDis" type="button" value=" Déconnexion ">
+            </div>
+        </ul>
+    </header>
+
+    <nav>
+        <ul id='menu'>
+            <img src='./images/iconmenu.png'>
+            <li><a href="./GestionCo.html">Gestion Commerciale</a></li>
+            <br>
+            <li><a href="./gestionRH.html">Gestion RH</a></li>
+            <br>
+            <li><a href="./gestionProjet.html">Gestion des Projets</a></li>
+            <br>
+            <li><a href="">Communs</a></li>
+        </ul>
+    </nav>
+
+        <!--addClient-->
+       <section  class="sections">
+           <article class="communs">
+               <p id='titleForm'>Liste et Mise à jour Client</p>
+                <ul>
+                    <li><h2>Présentation :</h2></li>
+                    <li>Choisir un Client dans la liste Déroulante</li>
+                    <li>Cliquer sur "rechercher"</li>
+                    <li><em>les informations client apparaissent</em></li>
+                    <li>Si vous souhaitez modifier le Client changer les information</li>
+                    <li>Cliquer sur Confirmer</li>
+                </ul>
+      </article>
+        <article id="bloc1" class="communs"> 
+        <form>
+            
+                
+                    
+            <!--numberclient--> 
+             <p>
+                 <strong>Liste client :</strong>
+                <select name="liste" id="numberClient">
+                    <option>-Chose Client By Code-</option>
+                    <option id='client1' value="#001">Code Client #001</option>
+                    <option id="client2"value="#002">Code Client #002</option>
+                    <option id='client3' value="#003">Code Client #003</option>
+                    <option id="client4"value="#004">Code Client #004</option>
+             </p>
+             <input type="button" id="searchClient" onclick="" value='rechercher'></li>
+                        <br>
+            <!--name-->        
+                    <p>
+                        <label for="name">
+                        <stong>Clients :</stong>
+                        <input type="text"  id="name" name="user_name" placeholder="Nom" required></label>
+                    </p> 
+            <!-- adresse-->
+                    <p>
+                        <label for="address">
+                        <stong>Adresse : </stong>
+                        <input type="text" id="address" name="user_address" placeholder="Num. rue / lieu dit... "required >
+                                 <br>
+                        <input type="text" id="postalCode" name="user_postal" placeholder="Code postal" pattern='[0-9]{5}' required>
+                                 <br>
+                        <input type="text" id="city" 
+                        name="user_city" placeholder="Villes" placeholder="Num. rue / lieu dit" value="" patter='[A-Z]{1}[a-z]'required></label>
+                    </p> 
+            <!--mail-->
+                   <p>
+                        <label for="mail">
+                        <stong>e-mail :</stong>
+                        <input type="email" id="email" name="user_mail" value="" placeholder="--E-mail--"required ></label>
+                   </p>
+            <!--tel-->
+                    <p>
+                        <label for="telephone">
+                        <stong>Telephone :</stong>
+                        <input type="text" id="telephone" name="user_tel" palceholder='Entrer numéro' pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"required></label>
+                    </p>
+            <!--typeclient-->
+                    <p>
+                        <label>
+                        <stong>Type de Client :</stong> 
+                            <br>
+                        <label for="checkboxFormPrivate">Privé
+                        <input type="checkbox" id="checkboxFormPrivate" value="Privé" 
+                        class="checkbox" name="type"></label>
+                        <br>
+                        <label for="checkboxFormPublic">Public<input type="checkbox" id="checkboxFormPublic" class="checkbox" value="Public" >
+                        </label>
+                        </label>
+                    </p>
+            <!--domaine-->
+                   <p>
+                        <label for="fieldOfActivity">
+                        <stong>Domaine d'activité :</stong> 
+                        <select name="domaine" id="fieldOfActivity"required >
+                             <option value="">--Please choose an option--</option>
+                             <option value="Industrie">Industrie</option>
+                             <option value="BTP">BTP</option>
+                             <option value="Alimentaire">Agro Alimentaire</option>
+                             <option value="Informatique">Informatique</option>
+                             <option value="Other">autre</option>
+                         </select></label>
+                  </p>
+            <!--raison social-->
+                   <p>
+                        <label for="socialReason">
+                        <stong>Raison Social :</stong>
+                        <input type="text" id="socialReason" placeholder="--Raison social--" required></label>
+                   </p>
+            <!--chiffre d'affaire-->
+                   <p>
+                        <label for="chiffreaffaire">
+                        <stong>Chiffre d'affaires :</stong>
+                        <input id="turnover" type="number" step="1" 
+                        placeholder="--Saisir nombre--" required><em>Euros</em></label>
+                   </p> 
+            <!--effectif-->
+                  <p>
+                        <label for="effective">
+                        <stong>Effectifs :</stong>
+                        <input id="effective" type="number" min=0  placeholder="--Saisir nombre--" required></label>
+                  </p>
+            <!--validation-->
+            <div id="endingButton">
+                <input id="validButton" type="submit" value="Confirmer">
+            </div>
+       
+        </form>
+      </article>
+    </section>
+    <footer>
+        <ul id=foot>
+          <li><a  href="#" >mentions légale</a></li> 
+            <br>
+          <li><a class=foot href="#">nous contactez</a></li>
+        </ul>
+    </footer>
+        <script src="./JS/gestionCo.js"></script>
+        <script src="./JS/mainGestionCo.js"></script>
+</body>
+</html>

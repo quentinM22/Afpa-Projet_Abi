@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>ABI France</title>
+</head>
+<body>   
+  <header>
+    <ul id='head'>
+      <li><a href="./index.html"><img id='logo' src='./images/logoAbi.png'></a></li>
+    </ul>
+  </header> 
+    <nav>
+      <ul id='menu'>
+        <img src='./images/iconmenu.png'>
+        <li><a href="./GestionCo.html">Gestion Commerciale</a></li>
+        <br>
+        <li><a href="./gestionRH.html">Gestion RH</a></li>
+        <br>
+        <li><a href="./gestionProjet.html">Gestion des Projets</a></li>
+        <br>
+        <li><a href="">Communs</a></li>
+      </ul>
+    </nav>
+    <section>
+        <article class='login'>
+          <p><h1 id="titleHome">Bienvenue sur Abi France, veuillez vous connecter pour accéder au site et ses fonctionnalités</h1></p>
+            <div class="loginForm">
+              <form>
+                  <label for="userName"><b>identifiant</b></label>
+                  <input type="text" placeholder="Entrer votre identifiant" name="userName" required>
+              
+                  <label for="pwd"><b>Mot de Passe</b></label>
+                  <input type="password" placeholder="Entrer votre mot de passe" name="pwd" required>
+              
+                  <button type="submit">Se connecter</button>
+                  <p id="infoMdp"></p>
+              </form> 
+            </div>
+            <button class='ButtonRH' id="adminAccess"><a href = './admin.html'> Accès Admin </a></button>      
+        </article>
+         <br>
+        <article  class='geo'>
+          <img src="./images/geolocalisation.png"></li>      
+        </article>
+    </section>  
+     <footer>
+        <ul id=foot>
+          <li><a  href="#" >mentions légale</a></li> 
+            <br>
+          <li><a class=foot href="#">nous contactez</a></li>
+        </ul>
+    </footer>
+    <script src="./JS/loginForm.js"></script>
+</body>
+</html>

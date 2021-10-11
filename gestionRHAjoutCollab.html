@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>ABI - Ajout Collab</title>
+</head>
+<body>   
+    <header>
+        <ul id='head'>
+            <li><a href="./index.html"><img id='logo' src='./images/logoAbi.png'></a></li>
+            <li id='title'>Ajout de collaborateurs</li>
+            <div id="divDis">
+                <input id="buttonDis" type="button" value=" Déconnexion ">
+            </div>
+        </ul>
+    </header>
+    <nav>
+        <ul id='menu'>
+            <img src='./images/iconmenu.png'>
+            <li><a href="./GestionCo.html">Gestion Commerciale</a></li>
+            <br>
+            <li><a href="./gestionRH.html">Gestion RH</a></li>
+            <br>
+            <li><a href="./gestionProjet.html">Gestion des Projets</a></li>
+            <br>
+            <li><a href="">Communs</a></li>
+        </ul>
+    </nav>
+     <section class="sections" id="newGP">
+        <article class='communs'>
+            <form>
+               <legend><h3>Infomation principal :</h3></legend>
+                    <p>
+                        <label for="name">Nom</label> : <input type="text" name="name" id="name" />
+                    </p>                
+                    <p>
+                        <label for="firstName">Prénom</label> : <input type="text" name="firstName" id="firstName" />
+                    </p>
+                    <p>
+                        <label for="dateBirth">Date de naissance</label> : <input type="date" name="dateBirth" id="dateBirth" />
+                    </p>
+                    <p>
+                        <label for="adress">Adresse</label> : <textarea name="adress" id="adress"></textarea>
+                    </p>
+                    <label for="photography">Ajouter une photographie:</label> : <input type="file" id="photography" name="photography" accept="image/png, image/jpeg">    
+                
+        </article>    
+        <article class='communs'>   
+                <legend><h3>Contrat :</h3></legend>
+                    <p> Veuillez indiquer le type de contrat :<br />
+                        <input type="radio" name="contractType" value="internship" id="internship" /> <label for="internship">Stagiaire</label><br />
+                            
+                        <input type="radio" name="contractType" value="interim" id="interim" /> <label for="interim">Intérimaire</label><br />
+                         
+                        <input type="radio" name="contractType" value="CDD" id="CDD" /> <label for="CDD">CDD</label><br />
+                            
+                        <input type="radio" name="contractType" value="CDI" id="CDI" /> <label for="CDI">CDI</label>
+                              
+                            
+                    <p>
+                        <label for="school">Ecole</label> : <input type="text" name="school" id="school" />
+                    </p>
+                    <p>
+                        <label for="agency">Agence d'intérim</label> : <input type="text" name="agency" id="agency" />
+                    </p>
+                    <p>
+                        <label for="reasonMission">Motif de mission</label> : <textarea name="reasonMission" id="reasonMission"></textarea>
+                    </p>
+                    <p>
+                        <label for="functions">Information fonctions :</label> :
+                            <select name="functions" id="functions">
+                                <option value ="studyLeader">Responsable Etude</option>
+                                <option value ="scrumMaster">Scrum Master</option>
+                                <option value ="developpeur">Développeur</option>
+                                <option value ="supportEngineer">Technicien support</option>
+                                <option value ="commercial">Commercial</option>
+                                <option value ="technicoCommercial">Technico-commercial</option>
+                                <option value ="secretary">Secrétaire</option>
+                            </select>
+                    </p>
+                    <p>
+                        <label for="qualifications">Information qualifications :</label> :
+                            <select name="qualifications" id="qualifications">
+                                <option value ="architect">Architecte</option>
+                                <option value ="designer">Designer</option>
+                                <option value ="devBdd">Développeur BDD</option>
+                                <option value ="devWeb">Développeur Web</option>
+                                <option value ="bilingualSecretary">Secrétaire Bilingue</option>
+                                <option value ="headOfDepartment">Chef de service</option>
+                                <option value ="commercialAgent">Agent commercial</option>
+                            </select>
+                    </p>                
+                    <p>
+                        <label for="salary">Salaire</label> : <input type="text" name="salary" id="salary" />
+                    </p>
+                    <p>
+                        <label for="contractStartDate">Date de début de contrat</label> : <input type="date" name="contractStartDate" id="contractStartDate" />
+                    </p>
+                    <p>
+                        <label for="contractEndDate">Date de fin de contrat</label> : <input type="date" name="contractEndDate" id="contractEndDate" />
+                    </p>
+                <div id='endingButton'>
+                <input id='validButton' type="submit" value="Valider">  
+                </div>
+            </form> 
+        </article> 
+        </section>  
+     <footer>
+        <ul id=foot>
+          <li><a  href="#" >mentions légale</a></li> 
+            <br>
+          <li><a class=foot href="#">nous contactez</a></li>
+        </ul>
+    </footer>
+    <script src="./JS/classCollab.js"></script>
+    <script src="./JS/collab.js"></script>
+</body>
+</html>
